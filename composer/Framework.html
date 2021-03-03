@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>构建自己的 PHP 框架 | 编程技术指南</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="在线文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.992cb7aa.css" as="style"><link rel="preload" href="/assets/js/app.f5e1ff5b.js" as="script"><link rel="preload" href="/assets/js/2.8a72c72c.js" as="script"><link rel="preload" href="/assets/js/7.0f0d18ad.js" as="script"><link rel="prefetch" href="/assets/js/10.adf1d11a.js"><link rel="prefetch" href="/assets/js/11.05929bac.js"><link rel="prefetch" href="/assets/js/12.e08f7d97.js"><link rel="prefetch" href="/assets/js/13.a11abedc.js"><link rel="prefetch" href="/assets/js/14.25a61f29.js"><link rel="prefetch" href="/assets/js/15.3dae9392.js"><link rel="prefetch" href="/assets/js/16.7097b501.js"><link rel="prefetch" href="/assets/js/17.c5770aa1.js"><link rel="prefetch" href="/assets/js/18.65c02563.js"><link rel="prefetch" href="/assets/js/19.c2b40799.js"><link rel="prefetch" href="/assets/js/20.e8fd2f96.js"><link rel="prefetch" href="/assets/js/21.8c90f758.js"><link rel="prefetch" href="/assets/js/22.02eec7ce.js"><link rel="prefetch" href="/assets/js/23.b6d48c6f.js"><link rel="prefetch" href="/assets/js/24.bf5405a1.js"><link rel="prefetch" href="/assets/js/25.6654b90f.js"><link rel="prefetch" href="/assets/js/26.4cdc83a1.js"><link rel="prefetch" href="/assets/js/27.1574188a.js"><link rel="prefetch" href="/assets/js/28.6cdd831d.js"><link rel="prefetch" href="/assets/js/29.2c3174ef.js"><link rel="prefetch" href="/assets/js/3.820b1a35.js"><link rel="prefetch" href="/assets/js/30.c8b2c7db.js"><link rel="prefetch" href="/assets/js/31.eaa61bd4.js"><link rel="prefetch" href="/assets/js/32.50d06a88.js"><link rel="prefetch" href="/assets/js/33.a597a745.js"><link rel="prefetch" href="/assets/js/34.6e65026b.js"><link rel="prefetch" href="/assets/js/35.421ed29b.js"><link rel="prefetch" href="/assets/js/36.9ffdbd3e.js"><link rel="prefetch" href="/assets/js/37.81ffe22a.js"><link rel="prefetch" href="/assets/js/38.ddc3dba7.js"><link rel="prefetch" href="/assets/js/39.d62dee0f.js"><link rel="prefetch" href="/assets/js/4.7b44bfca.js"><link rel="prefetch" href="/assets/js/40.ef7ff34e.js"><link rel="prefetch" href="/assets/js/41.b093aa5d.js"><link rel="prefetch" href="/assets/js/42.b68cf2ad.js"><link rel="prefetch" href="/assets/js/43.ce7d873a.js"><link rel="prefetch" href="/assets/js/44.bcaa5b6b.js"><link rel="prefetch" href="/assets/js/45.336572e7.js"><link rel="prefetch" href="/assets/js/46.5d7f2502.js"><link rel="prefetch" href="/assets/js/47.94a2abd1.js"><link rel="prefetch" href="/assets/js/48.9b56c30b.js"><link rel="prefetch" href="/assets/js/49.f1bbc7b5.js"><link rel="prefetch" href="/assets/js/5.d6de6bdf.js"><link rel="prefetch" href="/assets/js/50.245ba675.js"><link rel="prefetch" href="/assets/js/51.8ccdee0b.js"><link rel="prefetch" href="/assets/js/52.f91175b6.js"><link rel="prefetch" href="/assets/js/53.d1b064f7.js"><link rel="prefetch" href="/assets/js/54.8885fa32.js"><link rel="prefetch" href="/assets/js/55.eeb4936c.js"><link rel="prefetch" href="/assets/js/56.56274954.js"><link rel="prefetch" href="/assets/js/57.10d504db.js"><link rel="prefetch" href="/assets/js/58.98ced730.js"><link rel="prefetch" href="/assets/js/59.0e938fca.js"><link rel="prefetch" href="/assets/js/6.ba7cdab6.js"><link rel="prefetch" href="/assets/js/60.6f15e5b0.js"><link rel="prefetch" href="/assets/js/61.b6ec69fd.js"><link rel="prefetch" href="/assets/js/62.84d13589.js"><link rel="prefetch" href="/assets/js/63.ea38da0d.js"><link rel="prefetch" href="/assets/js/64.10c89245.js"><link rel="prefetch" href="/assets/js/65.987ca467.js"><link rel="prefetch" href="/assets/js/66.4b9b4052.js"><link rel="prefetch" href="/assets/js/67.5fc83c14.js"><link rel="prefetch" href="/assets/js/68.6c7928b9.js"><link rel="prefetch" href="/assets/js/69.240bc25c.js"><link rel="prefetch" href="/assets/js/70.95077249.js"><link rel="prefetch" href="/assets/js/71.8e23b6d7.js"><link rel="prefetch" href="/assets/js/72.4da248c5.js"><link rel="prefetch" href="/assets/js/73.1b821fd9.js"><link rel="prefetch" href="/assets/js/74.c6768e2a.js"><link rel="prefetch" href="/assets/js/75.503e4e3b.js"><link rel="prefetch" href="/assets/js/76.e16d0791.js"><link rel="prefetch" href="/assets/js/77.38723f46.js"><link rel="prefetch" href="/assets/js/78.8532e215.js"><link rel="prefetch" href="/assets/js/79.66982148.js"><link rel="prefetch" href="/assets/js/8.b33b985d.js"><link rel="prefetch" href="/assets/js/80.6b6554b3.js"><link rel="prefetch" href="/assets/js/81.edba2d47.js"><link rel="prefetch" href="/assets/js/82.bef1c55d.js"><link rel="prefetch" href="/assets/js/83.0cf79e15.js"><link rel="prefetch" href="/assets/js/84.dd523e2b.js"><link rel="prefetch" href="/assets/js/85.37559d8e.js"><link rel="prefetch" href="/assets/js/86.7e0fbdd7.js"><link rel="prefetch" href="/assets/js/9.ca608eda.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.992cb7aa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hero.png" alt="编程技术指南" class="logo"> <span class="site-name can-hide">编程技术指南</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机基础" class="mobile-dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basic/" class="nav-link">
+  导读
+</a></li><li class="dropdown-item"><!----> <a href="/basic/hardware/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/basic/system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/basic/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/basic/note/" class="nav-link">
+  学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/system/windows/" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/system/macos/" class="nav-link">
+  Mac OS
+</a></li><li class="dropdown-item"><!----> <a href="/system/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/system/rhel/" class="nav-link">
+  RHEL
+</a></li><li class="dropdown-item"><!----> <a href="/system/centos/" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/system/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AST" class="dropdown-title"><span class="title">AST</span> <span class="arrow down"></span></button> <button type="button" aria-label="AST" class="mobile-dropdown-title"><span class="title">AST</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ast/obfuscator/" class="nav-link">
+  混淆加密基础
+</a></li><li class="dropdown-item"><!----> <a href="/ast/babel/" class="nav-link">
+  babel详解
+</a></li><li class="dropdown-item"><!----> <a href="/ast/ast/" class="nav-link">
+  抽象语法树
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJS" class="dropdown-title"><span class="title">NodeJS</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJS" class="mobile-dropdown-title"><span class="title">NodeJS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/start/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/node/express/" class="nav-link">
+  express
+</a></li><li class="dropdown-item"><!----> <a href="/node/koa2/" class="nav-link">
+  koa2
+</a></li><li class="dropdown-item"><!----> <a href="/node/egg/" class="nav-link">
+  egg.js
+</a></li><li class="dropdown-item"><!----> <a href="/node/nest/" class="nav-link">
+  nest.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端教程" class="mobile-dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/frontend/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-subitem"><a href="/frontend/bootstrap/" class="nav-link">
+  BootStrap
+</a></li><li class="dropdown-subitem"><a href="/frontend/commonjs/" class="nav-link">
+  commonjs
+</a></li><li class="dropdown-subitem"><a href="/frontend/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/react/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端教程" class="dropdown-title"><span class="title">后端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端教程" class="mobile-dropdown-title"><span class="title">后端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          后端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/php.html" class="nav-link">
+  PHP基础
+</a></li><li class="dropdown-subitem"><a href="/php/mysql.html" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/thinkphp.html" class="nav-link">
+  ThinkPHP
+</a></li><li class="dropdown-subitem"><a href="/php/laraval.html" class="nav-link">
+  Laraval
+</a></li><li class="dropdown-subitem"><a href="/php/yii2.html" class="nav-link">
+  YII2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="游戏开发" class="dropdown-title"><span class="title">游戏开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="游戏开发" class="mobile-dropdown-title"><span class="title">游戏开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/game/cocos.html" class="nav-link">
+  Cocos
+</a></li><li class="dropdown-item"><!----> <a href="/game/egret.html" class="nav-link">
+  Egret
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/fansui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机基础" class="mobile-dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basic/" class="nav-link">
+  导读
+</a></li><li class="dropdown-item"><!----> <a href="/basic/hardware/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/basic/system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/basic/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/basic/note/" class="nav-link">
+  学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/system/windows/" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/system/macos/" class="nav-link">
+  Mac OS
+</a></li><li class="dropdown-item"><!----> <a href="/system/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/system/rhel/" class="nav-link">
+  RHEL
+</a></li><li class="dropdown-item"><!----> <a href="/system/centos/" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/system/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AST" class="dropdown-title"><span class="title">AST</span> <span class="arrow down"></span></button> <button type="button" aria-label="AST" class="mobile-dropdown-title"><span class="title">AST</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ast/obfuscator/" class="nav-link">
+  混淆加密基础
+</a></li><li class="dropdown-item"><!----> <a href="/ast/babel/" class="nav-link">
+  babel详解
+</a></li><li class="dropdown-item"><!----> <a href="/ast/ast/" class="nav-link">
+  抽象语法树
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJS" class="dropdown-title"><span class="title">NodeJS</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJS" class="mobile-dropdown-title"><span class="title">NodeJS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/start/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/node/express/" class="nav-link">
+  express
+</a></li><li class="dropdown-item"><!----> <a href="/node/koa2/" class="nav-link">
+  koa2
+</a></li><li class="dropdown-item"><!----> <a href="/node/egg/" class="nav-link">
+  egg.js
+</a></li><li class="dropdown-item"><!----> <a href="/node/nest/" class="nav-link">
+  nest.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端教程" class="mobile-dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/frontend/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-subitem"><a href="/frontend/bootstrap/" class="nav-link">
+  BootStrap
+</a></li><li class="dropdown-subitem"><a href="/frontend/commonjs/" class="nav-link">
+  commonjs
+</a></li><li class="dropdown-subitem"><a href="/frontend/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/react/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端教程" class="dropdown-title"><span class="title">后端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端教程" class="mobile-dropdown-title"><span class="title">后端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          后端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/php.html" class="nav-link">
+  PHP基础
+</a></li><li class="dropdown-subitem"><a href="/php/mysql.html" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/thinkphp.html" class="nav-link">
+  ThinkPHP
+</a></li><li class="dropdown-subitem"><a href="/php/laraval.html" class="nav-link">
+  Laraval
+</a></li><li class="dropdown-subitem"><a href="/php/yii2.html" class="nav-link">
+  YII2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="游戏开发" class="dropdown-title"><span class="title">游戏开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="游戏开发" class="mobile-dropdown-title"><span class="title">游戏开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/game/cocos.html" class="nav-link">
+  Cocos
+</a></li><li class="dropdown-item"><!----> <a href="/game/egret.html" class="nav-link">
+  Egret
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/fansui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/composer/" aria-current="page" class="sidebar-link">Composer</a></li><li><a href="/composer/Framework.html" aria-current="page" class="active sidebar-link">构建自己的 PHP 框架</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/composer/Framework.html#初始化项目" class="sidebar-link">初始化项目</a></li><li class="sidebar-sub-header"><a href="/composer/Framework.html#构建路由" class="sidebar-link">构建路由</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/composer/Framework.html#设计-mvc" class="sidebar-link">设计 MVC</a></li></ul></li></ul></li><li><a href="/composer/More.html" class="sidebar-link">学习更多</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="初始化项目"><a href="#初始化项目" class="header-anchor">#</a> 初始化项目</h2> <blockquote><p>『Composer 一统天下的时代已经到来！』——白岩松</p></blockquote> <p>“一个时代结束了，另一个时代开始了。”</p> <p>Framework Interoperability Group（框架可互用性小组），简称 FIG，成立于 2009 年。FIG 最初由几位知名 PHP 框架开发者发起，在吸纳了许多优秀的大脑和强健的体魄后，提出了 PSR-0 到 PSR-4 五套 PHP 非官方规范：</p> <ol><li><p>PSR-0 (Autoloading Standard) 自动加载标准</p></li> <li><p>PSR-1 (Basic Coding Standard) 基础编码标准</p></li> <li><p>PSR-2 (Coding Style Guide) 编码风格向导</p></li> <li><p>PSR-3 (Logger Interface) 日志接口</p></li> <li><p>PSR-4 (Improved Autoloading) 自动加载优化标准</p></li></ol> <p>之后，在此标准之上，Composer 横空出世！Composer 利用 PSR-0 和 PSR-4 以及 PHP5.3 的命名空间构造了一个繁荣的 PHP 生态系统。Composer 类似著名的 npm 和 RubyGems，给海量 PHP 包提供了一个异常方便的协作通道，Composer Hub 地址：<a href="https://packagist.org/" target="_blank" rel="noopener noreferrer">https://packagist.org/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。Composer 中文网站：<a href="http://www.phpcomposer.com/" target="_blank" rel="noopener noreferrer">http://www.phpcomposer.com/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>目前 PHP 界风头正劲的 Laravel 和 Symfony 均直接基于 Composer，大家耳熟能详著名框架 CI 和 Yii 的正开发版本 CodeIgniter 3 和 Yii 2 也都基于 Composer（更新：北京时间2014年10月13日 Yii 2 已经发布）。Composer 就是 PHP 框架的未来，有了它，让 CI 的路由和 Laravel 的 Eloquent ORM 协作就会变的非常简单。</p> <p>PHP 语言本身就带有强大的网络功能、文件管理功能和丰富的系统 API，Composer 也只是一段 PHP 脚本而已。可以使用</p> <div class="language- extra-class"><pre class="language-text"><code>php composer.phar update
+</code></pre></div><p>在合适的地方新建一个文件夹，命名为 MFFC（My First Framework based on Composer），在文件夹下新建文件 composer.json：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;require&quot;: {
+  }
+}
+</code></pre></div><p>命令行切换到 MFFC 目录下，运行：</p> <div class="language- extra-class"><pre class="language-text"><code>composer update
+</code></pre></div><p>稍等片刻，会出现如下文件及文件夹：</p> <p><img src="/assets/img/init.f1836dec.jpg" alt="aaaa"></p> <p>如果以上内容成功出现，恭喜你，Composer 初始化成功！</p> <h2 id="构建路由"><a href="#构建路由" class="header-anchor">#</a> 构建路由</h2> <p>久负盛名的 CodeIgniter 框架是很多人的 PHP 开发入门框架，同样也是我开始学习如何从头构建一个网站的框架。在 CI 中我学到了很多，其中对 MVC 的深入理解和对框架本质的理解对我的影响最大。从使用框架是为了提高开发效率的角度来看，框架的本质就是路由。</p> <p>下面我们就开始自己来构建路由，先去 GitHub 搜一下：<a href="https://github.com/search?l=PHP&amp;o=desc&amp;q=router&amp;ref=searchresults&amp;s=stars&amp;type=Repositories&amp;utf8=%E2%9C%93" target="_blank" rel="noopener noreferrer">点此查看搜索结果<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>推荐 <a href="https://github.com/NoahBuscher/Macaw" target="_blank" rel="noopener noreferrer">https://github.com/NoahBuscher/Macaw<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，对应的 Composer 包为 noahbuscher/macaw 。</p> <p>下面开始安装它，更改 composer.json：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;require&quot;: {
+    &quot;noahbuscher/macaw&quot;: &quot;dev-master&quot;
+  }
+}
+</code></pre></div><p>运行 composer update，成功之后将得到以下目录：</p> <p><img src="/assets/img/update.70627b90.jpg" alt=""></p> <p>至此，Macaw 包安装成功！</p> <p>下面，就是见证奇迹的时刻！我们将赋予 MFFC 生命力，让它真正地跑起来！</p> <p>新建 MFFC/public 文件夹，这个文件夹将是用户唯一可见的部分。在文件夹下新建 index.php 文件：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php
+
+// Autoload 自动载入
+require '../vendor/autoload.php';
+
+// 路由配置
+require '../config/routes.php';
+</code></pre></div><p>上面一行表示引入 Composer 的自动载入功能，下面一行表示载入路由配置文件。新建 MFFC/config 文件夹，在里面新建 routs.php 文件，内容如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;?php
+
+use NoahBuscher\Macaw\Macaw;
+
+Macaw::get('fuck', function() {
+  echo &quot;成功！&quot;;
+});
+
+Macaw::get('(:all)', function($fu) {
+  echo '未匹配到路由&lt;br&gt;'.$fu;
+});
+
+Macaw::dispatch();
+
+</code></pre></div><p>Macaw 的文档位于 <a href="https://github.com/NoahBuscher/Macaw" target="_blank" rel="noopener noreferrer">https://github.com/NoahBuscher/Macaw<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，请按照你的 HTTP 服务软件类型自行设置伪静态，其实跟绝大多数框架一样：“将所有非静态文件全部指向 index.php”。</p> <p>然后，将某一个端口用 Apache 或 Nginx 分配给 MFFC/public 目录，这一步十分建议用 Apache 或者 Nginx 做。</p> <p>如果使用 PHP 内置 HTTP 服务器：</p> <p>cd public &amp;&amp; php -S 127.0.0.1:3000
+将导致路由的 Macaw::get('fuck' 必须写成 Macaw::get('/fuck' 才能响应。</p> <p>目前的代码使用 Apache + mod_php 和 Nginx + php-fpm 方式均没有问题。</p> <p>Macaw 只有一个文件，去除空行总共也就一百行多一点，通过代码我们能直接看明白它是怎么工作的。下面我简略分析一下：</p> <ol><li><p>Composer 的自动加载在每次 URL 驱动 MFFC/public/index.php 之后会在内存中维护一个全量命名空间类名到文件名的数组，这样当我们在代码中使用某个类的时候，将自动载入该类所在的文件。</p></li> <li><p>我们在路由文件中载入了 Macaw 类：“use NoahBuscher\Macaw\Macaw;”，接着调用了两次静态方法 ::get()，这个方法是不存在的，将由 MFFC/vendor/codingbean/macaw/Macaw.php 中的 __callstatic() 接管。</p></li> <li><p>这个函数接受两个参数，$method 和 $params，前者是具体的 function 名称，在这里就是 get，后者是这次调用传递的参数，即 Macaw::get('fuck',function(){...}) 中的两个参数。第一个参数是我们想要监听的 URL 值，第二个参数是一个 PHP 闭包，作为回调，代表 URL 匹配成功后我们想要做的事情。</p></li> <li><p>__callstatic() 做的事情也很简单，分别将目标URL（即 /fuck）、HTTP方法（即 GET）和回调代码压入 $routes、$methods 和 $callbacks 三个 Macaw 类的静态成员变量（数组）中。</p></li> <li><p>路由文件最后一行的 Macaw::dispatch(); 方法才是真正处理当前 URL 的地方。能直接匹配到的会直接调用回调，不能直接匹配到的将利用正则进行匹配。</p></li></ol> <h3 id="设计-mvc"><a href="#设计-mvc" class="header-anchor">#</a> 设计 MVC</h3> <blockquote><p>终于可以 “一次编写，到处发布” 了，泪流满面！</p></blockquote> <p>之前，我们使用 codingbean/macaw 这个 Composer 包构建了两条简单路由，第一条是响应 GET ‘/fuck’ 的，另一条会 hold 住所有请求。其实对 PHP 框架来说，有了路由就有了一切。所以接下来我们要做的事情就是让 MFFC 框架更加规范，更加丰满。</p> <p>这就牵扯到了 PHP 框架另外的价值：确立开发规范以便于多人协作，使用 ORM、模板引擎 等工具以提高开发效率。</p> <p><a href="https://lvwenhan.com/php/408.html" target="_blank" rel="noopener noreferrer">https://lvwenhan.com/php/408.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/composer/" class="prev router-link-active">
+        Composer
+      </a></span> <span class="next"><a href="/composer/More.html">
+        学习更多
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f5e1ff5b.js" defer></script><script src="/assets/js/2.8a72c72c.js" defer></script><script src="/assets/js/7.0f0d18ad.js" defer></script>
+  </body>
+</html>

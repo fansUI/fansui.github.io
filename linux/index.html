@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux命令 | 编程技术指南</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="在线文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.992cb7aa.css" as="style"><link rel="preload" href="/assets/js/app.f5e1ff5b.js" as="script"><link rel="preload" href="/assets/js/2.8a72c72c.js" as="script"><link rel="preload" href="/assets/js/46.5d7f2502.js" as="script"><link rel="prefetch" href="/assets/js/10.adf1d11a.js"><link rel="prefetch" href="/assets/js/11.05929bac.js"><link rel="prefetch" href="/assets/js/12.e08f7d97.js"><link rel="prefetch" href="/assets/js/13.a11abedc.js"><link rel="prefetch" href="/assets/js/14.25a61f29.js"><link rel="prefetch" href="/assets/js/15.3dae9392.js"><link rel="prefetch" href="/assets/js/16.7097b501.js"><link rel="prefetch" href="/assets/js/17.c5770aa1.js"><link rel="prefetch" href="/assets/js/18.65c02563.js"><link rel="prefetch" href="/assets/js/19.c2b40799.js"><link rel="prefetch" href="/assets/js/20.e8fd2f96.js"><link rel="prefetch" href="/assets/js/21.8c90f758.js"><link rel="prefetch" href="/assets/js/22.02eec7ce.js"><link rel="prefetch" href="/assets/js/23.b6d48c6f.js"><link rel="prefetch" href="/assets/js/24.bf5405a1.js"><link rel="prefetch" href="/assets/js/25.6654b90f.js"><link rel="prefetch" href="/assets/js/26.4cdc83a1.js"><link rel="prefetch" href="/assets/js/27.1574188a.js"><link rel="prefetch" href="/assets/js/28.6cdd831d.js"><link rel="prefetch" href="/assets/js/29.2c3174ef.js"><link rel="prefetch" href="/assets/js/3.820b1a35.js"><link rel="prefetch" href="/assets/js/30.c8b2c7db.js"><link rel="prefetch" href="/assets/js/31.eaa61bd4.js"><link rel="prefetch" href="/assets/js/32.50d06a88.js"><link rel="prefetch" href="/assets/js/33.a597a745.js"><link rel="prefetch" href="/assets/js/34.6e65026b.js"><link rel="prefetch" href="/assets/js/35.421ed29b.js"><link rel="prefetch" href="/assets/js/36.9ffdbd3e.js"><link rel="prefetch" href="/assets/js/37.81ffe22a.js"><link rel="prefetch" href="/assets/js/38.ddc3dba7.js"><link rel="prefetch" href="/assets/js/39.d62dee0f.js"><link rel="prefetch" href="/assets/js/4.7b44bfca.js"><link rel="prefetch" href="/assets/js/40.ef7ff34e.js"><link rel="prefetch" href="/assets/js/41.b093aa5d.js"><link rel="prefetch" href="/assets/js/42.b68cf2ad.js"><link rel="prefetch" href="/assets/js/43.ce7d873a.js"><link rel="prefetch" href="/assets/js/44.bcaa5b6b.js"><link rel="prefetch" href="/assets/js/45.336572e7.js"><link rel="prefetch" href="/assets/js/47.94a2abd1.js"><link rel="prefetch" href="/assets/js/48.9b56c30b.js"><link rel="prefetch" href="/assets/js/49.f1bbc7b5.js"><link rel="prefetch" href="/assets/js/5.d6de6bdf.js"><link rel="prefetch" href="/assets/js/50.245ba675.js"><link rel="prefetch" href="/assets/js/51.8ccdee0b.js"><link rel="prefetch" href="/assets/js/52.f91175b6.js"><link rel="prefetch" href="/assets/js/53.d1b064f7.js"><link rel="prefetch" href="/assets/js/54.8885fa32.js"><link rel="prefetch" href="/assets/js/55.eeb4936c.js"><link rel="prefetch" href="/assets/js/56.56274954.js"><link rel="prefetch" href="/assets/js/57.10d504db.js"><link rel="prefetch" href="/assets/js/58.98ced730.js"><link rel="prefetch" href="/assets/js/59.0e938fca.js"><link rel="prefetch" href="/assets/js/6.ba7cdab6.js"><link rel="prefetch" href="/assets/js/60.6f15e5b0.js"><link rel="prefetch" href="/assets/js/61.b6ec69fd.js"><link rel="prefetch" href="/assets/js/62.84d13589.js"><link rel="prefetch" href="/assets/js/63.ea38da0d.js"><link rel="prefetch" href="/assets/js/64.10c89245.js"><link rel="prefetch" href="/assets/js/65.987ca467.js"><link rel="prefetch" href="/assets/js/66.4b9b4052.js"><link rel="prefetch" href="/assets/js/67.5fc83c14.js"><link rel="prefetch" href="/assets/js/68.6c7928b9.js"><link rel="prefetch" href="/assets/js/69.240bc25c.js"><link rel="prefetch" href="/assets/js/7.0f0d18ad.js"><link rel="prefetch" href="/assets/js/70.95077249.js"><link rel="prefetch" href="/assets/js/71.8e23b6d7.js"><link rel="prefetch" href="/assets/js/72.4da248c5.js"><link rel="prefetch" href="/assets/js/73.1b821fd9.js"><link rel="prefetch" href="/assets/js/74.c6768e2a.js"><link rel="prefetch" href="/assets/js/75.503e4e3b.js"><link rel="prefetch" href="/assets/js/76.e16d0791.js"><link rel="prefetch" href="/assets/js/77.38723f46.js"><link rel="prefetch" href="/assets/js/78.8532e215.js"><link rel="prefetch" href="/assets/js/79.66982148.js"><link rel="prefetch" href="/assets/js/8.b33b985d.js"><link rel="prefetch" href="/assets/js/80.6b6554b3.js"><link rel="prefetch" href="/assets/js/81.edba2d47.js"><link rel="prefetch" href="/assets/js/82.bef1c55d.js"><link rel="prefetch" href="/assets/js/83.0cf79e15.js"><link rel="prefetch" href="/assets/js/84.dd523e2b.js"><link rel="prefetch" href="/assets/js/85.37559d8e.js"><link rel="prefetch" href="/assets/js/86.7e0fbdd7.js"><link rel="prefetch" href="/assets/js/9.ca608eda.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.992cb7aa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/hero.png" alt="编程技术指南" class="logo"> <span class="site-name can-hide">编程技术指南</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机基础" class="mobile-dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basic/" class="nav-link">
+  导读
+</a></li><li class="dropdown-item"><!----> <a href="/basic/hardware/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/basic/system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/basic/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/basic/note/" class="nav-link">
+  学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/system/windows/" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/system/macos/" class="nav-link">
+  Mac OS
+</a></li><li class="dropdown-item"><!----> <a href="/system/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/system/rhel/" class="nav-link">
+  RHEL
+</a></li><li class="dropdown-item"><!----> <a href="/system/centos/" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/system/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AST" class="dropdown-title"><span class="title">AST</span> <span class="arrow down"></span></button> <button type="button" aria-label="AST" class="mobile-dropdown-title"><span class="title">AST</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ast/obfuscator/" class="nav-link">
+  混淆加密基础
+</a></li><li class="dropdown-item"><!----> <a href="/ast/babel/" class="nav-link">
+  babel详解
+</a></li><li class="dropdown-item"><!----> <a href="/ast/ast/" class="nav-link">
+  抽象语法树
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJS" class="dropdown-title"><span class="title">NodeJS</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJS" class="mobile-dropdown-title"><span class="title">NodeJS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/start/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/node/express/" class="nav-link">
+  express
+</a></li><li class="dropdown-item"><!----> <a href="/node/koa2/" class="nav-link">
+  koa2
+</a></li><li class="dropdown-item"><!----> <a href="/node/egg/" class="nav-link">
+  egg.js
+</a></li><li class="dropdown-item"><!----> <a href="/node/nest/" class="nav-link">
+  nest.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端教程" class="mobile-dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/frontend/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-subitem"><a href="/frontend/bootstrap/" class="nav-link">
+  BootStrap
+</a></li><li class="dropdown-subitem"><a href="/frontend/commonjs/" class="nav-link">
+  commonjs
+</a></li><li class="dropdown-subitem"><a href="/frontend/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/react/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端教程" class="dropdown-title"><span class="title">后端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端教程" class="mobile-dropdown-title"><span class="title">后端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          后端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/php.html" class="nav-link">
+  PHP基础
+</a></li><li class="dropdown-subitem"><a href="/php/mysql.html" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/thinkphp.html" class="nav-link">
+  ThinkPHP
+</a></li><li class="dropdown-subitem"><a href="/php/laraval.html" class="nav-link">
+  Laraval
+</a></li><li class="dropdown-subitem"><a href="/php/yii2.html" class="nav-link">
+  YII2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="游戏开发" class="dropdown-title"><span class="title">游戏开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="游戏开发" class="mobile-dropdown-title"><span class="title">游戏开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/game/cocos.html" class="nav-link">
+  Cocos
+</a></li><li class="dropdown-item"><!----> <a href="/game/egret.html" class="nav-link">
+  Egret
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/fansui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机基础" class="dropdown-title"><span class="title">计算机基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机基础" class="mobile-dropdown-title"><span class="title">计算机基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basic/" class="nav-link">
+  导读
+</a></li><li class="dropdown-item"><!----> <a href="/basic/hardware/" class="nav-link">
+  计算机组成原理
+</a></li><li class="dropdown-item"><!----> <a href="/basic/system/" class="nav-link">
+  操作系统
+</a></li><li class="dropdown-item"><!----> <a href="/basic/network/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/basic/note/" class="nav-link">
+  学习笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="操作系统" class="mobile-dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/system/windows/" class="nav-link">
+  Windows
+</a></li><li class="dropdown-item"><!----> <a href="/system/macos/" class="nav-link">
+  Mac OS
+</a></li><li class="dropdown-item"><!----> <a href="/system/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/system/rhel/" class="nav-link">
+  RHEL
+</a></li><li class="dropdown-item"><!----> <a href="/system/centos/" class="nav-link">
+  Centos
+</a></li><li class="dropdown-item"><!----> <a href="/system/ubuntu/" class="nav-link">
+  Ubuntu
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AST" class="dropdown-title"><span class="title">AST</span> <span class="arrow down"></span></button> <button type="button" aria-label="AST" class="mobile-dropdown-title"><span class="title">AST</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ast/obfuscator/" class="nav-link">
+  混淆加密基础
+</a></li><li class="dropdown-item"><!----> <a href="/ast/babel/" class="nav-link">
+  babel详解
+</a></li><li class="dropdown-item"><!----> <a href="/ast/ast/" class="nav-link">
+  抽象语法树
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="NodeJS" class="dropdown-title"><span class="title">NodeJS</span> <span class="arrow down"></span></button> <button type="button" aria-label="NodeJS" class="mobile-dropdown-title"><span class="title">NodeJS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/start/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/node/express/" class="nav-link">
+  express
+</a></li><li class="dropdown-item"><!----> <a href="/node/koa2/" class="nav-link">
+  koa2
+</a></li><li class="dropdown-item"><!----> <a href="/node/egg/" class="nav-link">
+  egg.js
+</a></li><li class="dropdown-item"><!----> <a href="/node/nest/" class="nav-link">
+  nest.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端教程" class="dropdown-title"><span class="title">前端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端教程" class="mobile-dropdown-title"><span class="title">前端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/frontend/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/frontend/javascript/" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/frontend/jquery/" class="nav-link">
+  Jquery
+</a></li><li class="dropdown-subitem"><a href="/frontend/bootstrap/" class="nav-link">
+  BootStrap
+</a></li><li class="dropdown-subitem"><a href="/frontend/commonjs/" class="nav-link">
+  commonjs
+</a></li><li class="dropdown-subitem"><a href="/frontend/es6/" class="nav-link">
+  es6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/frontend/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/frontend/react/" class="nav-link">
+  React
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端教程" class="dropdown-title"><span class="title">后端教程</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端教程" class="mobile-dropdown-title"><span class="title">后端教程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          后端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/php.html" class="nav-link">
+  PHP基础
+</a></li><li class="dropdown-subitem"><a href="/php/mysql.html" class="nav-link">
+  MySQL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/php/thinkphp.html" class="nav-link">
+  ThinkPHP
+</a></li><li class="dropdown-subitem"><a href="/php/laraval.html" class="nav-link">
+  Laraval
+</a></li><li class="dropdown-subitem"><a href="/php/yii2.html" class="nav-link">
+  YII2
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="游戏开发" class="dropdown-title"><span class="title">游戏开发</span> <span class="arrow down"></span></button> <button type="button" aria-label="游戏开发" class="mobile-dropdown-title"><span class="title">游戏开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/game/cocos.html" class="nav-link">
+  Cocos
+</a></li><li class="dropdown-item"><!----> <a href="/game/egret.html" class="nav-link">
+  Egret
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/fansui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/linux/" aria-current="page" class="active sidebar-link">Linux命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/#linux命令大全-手册" class="sidebar-link">Linux命令大全(手册)</a></li><li class="sidebar-sub-header"><a href="/linux/#ls命令" class="sidebar-link">ls命令</a></li><li class="sidebar-sub-header"><a href="/linux/#cp命令" class="sidebar-link">cp命令</a></li></ul></li><li><a href="/linux/install.html" class="sidebar-link">系统安装</a></li><li><a href="/linux/file.html" class="sidebar-link">目录操作</a></li><li><a href="/linux/zip.html" class="sidebar-link">压缩与打包</a></li><li><a href="/linux/account.html" class="sidebar-link">账号管理</a></li><li><a href="/linux/power.html" class="sidebar-link">权限管理</a></li><li><a href="/linux/disk.html" class="sidebar-link">磁盘操作</a></li><li><a href="/linux/lnmp.html" class="sidebar-link">LNMP</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="linux命令大全-手册"><a href="#linux命令大全-手册" class="header-anchor">#</a> Linux命令大全(手册)</h2> <p><a href="https://www.linuxcool.com/" target="_blank" rel="noopener noreferrer">https://www.linuxcool.com/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="ls命令"><a href="#ls命令" class="header-anchor">#</a> ls命令</h2> <p>ls 命令是Linux下最常用的指令之一。ls命令为英文单词 list 的缩写，正如英文单词 list 的意思，其功能是列出指定目录下的内容及其相关属性信息。</p> <p>默认状态下，ls命令会列出当前目录的内容。而带上参数后，我们可以用ls做更多的事情。作为最基础同时又是使用频率很高的命令，我们很有必要搞清楚ls命令的用法，那么接下来一起看看吧！</p> <p>语法格式: ls [选项] [文件]</p> <p>常用参数：</p> <table><thead><tr><th style="text-align:center;">参数</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">-a</td> <td style="text-align:center;">显示所有文件及目录 (包括以“.”开头的隐藏文件)</td></tr> <tr><td style="text-align:center;">-l</td> <td style="text-align:center;">使用长格式列出文件及目录信息</td></tr> <tr><td style="text-align:center;">-r</td> <td style="text-align:center;">将文件以相反次序显示(默认依英文字母次序)</td></tr> <tr><td style="text-align:center;">-t</td> <td style="text-align:center;">根据最后的修改时间排序</td></tr> <tr><td style="text-align:center;">-A</td> <td style="text-align:center;">同 -a ，但不列出 “.” (当前目录) 及 “..” (父目录)</td></tr> <tr><td style="text-align:center;">-S</td> <td style="text-align:center;">根据文件大小排序</td></tr> <tr><td style="text-align:center;">-R</td> <td style="text-align:center;">递归列出所有子目录</td></tr></tbody></table> <h2 id="cp命令"><a href="#cp命令" class="header-anchor">#</a> cp命令</h2> <p>cp命令可以理解为英文单词copy的缩写，其功能为复制文件或目录。</p> <p>cp命令可以将多个文件复制到一个具体的文件名或一个已经存在的目录下，也可以同时复制多个文件到一个指定的目录中。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/linux/install.html">
+        系统安装
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f5e1ff5b.js" defer></script><script src="/assets/js/2.8a72c72c.js" defer></script><script src="/assets/js/46.5d7f2502.js" defer></script>
+  </body>
+</html>
